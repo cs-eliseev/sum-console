@@ -1,0 +1,11 @@
+<?php
+
+require_once "vendor/autoload.php";
+
+use Alexey\Sum;
+use Symfony\Component\Console\Application;
+use Terminal\SumCommand;
+
+$app = new Application('Console v.1.0.0');
+$app->add(new SumCommand());
+$app->run();
