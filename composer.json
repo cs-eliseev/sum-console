@@ -1,0 +1,15 @@
+{
+    "name": "cs-eliseev/sum-console",
+    "description": "Exec sum a + b for terminal",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cs-eliseev",
+            "email": "a.k.eliseev@gmail.com"
+        }
+    ],
+    "require": {
+        "alexey/sum": "*"
+    }
+}
