@@ -28,10 +28,16 @@ class SumCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $sum = new Sum();
-        $output->writeln($sum->sum(
-            $input->getArgument('a'),
-            $input->getArgument('b')
-        ));
+        try {
+            $math = new Sum();
+            $msg = $math->sum(
+                $input->getArgument('a'),
+                $input->getArgument('b')
+            );
+        } catch (\Throwable $e) {
+            $msg = $e->getMessage();
+        }
+
+        $output->writeln($msg);
     }
 }
